@@ -16,7 +16,7 @@ ExpressionApp.exe  (NVIDIA Maxine)
         ↓ UDP 127.0.0.1:9140
 maxine_vts_api_bridge.py
         ↓ WebSocket ws://192.168.x.x:8001
-                                ──────→ VTube Studio Plugin API
+                                ──────> VTube Studio Plugin API
                                         face parameters injected
                                         directly into the model
 ```
