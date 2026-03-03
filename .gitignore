@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.bin
+*.log
+.vts_token.json
+config.json
+run.bat
+
+# Third-party / sensitive — do not publish
+AR-SDK-Samples-src/
+OpenSeeFace-src2/
+reverse_vts/
+reverse_vts_full/

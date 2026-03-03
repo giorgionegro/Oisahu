@@ -1,0 +1,17 @@
+@echo off
+REM Copy this file to run.bat and edit the values below for your setup.
+REM - Change --vts-host to your Linux machine's local IP
+REM - Change --expression-app-path if your Steam library is in a different location
+REM - Change --camera_cap=0 to a different cap index if needed (run ExpressionApp.exe --print_caps to list them)
+
+python "%~dp0maxine_vts_api_bridge.py" ^
+  --output-mode default ^
+  --expression-app-path "D:\SteamLibrary\steamapps\common\VTube Studio\VTube Studio_Data\StreamingAssets\MXTracker\v2\ExpressionApp.exe" ^
+  --expression-args "--show=False --landmarks=True --model_path=.\models --cam_res=1920x1080 --expr_mode=2 --camera=0 --camera_cap=0 --cam_fps=60 --fps_limit=60 --use_opencl=False --cam_api=0 --pose_mode=2 --face_model=models\face_model3.nvf --render_model=models\face_model3.nvf --filter=55" ^
+  --mx-udp-bind 127.0.0.1 ^
+  --mx-udp-port 9140 ^
+  --vts-host 192.168.1.127 ^
+  --vts-port 8001 ^
+  --fps 60
+pause
+
